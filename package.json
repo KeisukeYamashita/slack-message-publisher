@@ -1,5 +1,5 @@
 {
-  "name": "slack-message",
+  "name": "slack-message-publisher",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KeisukeYamashita/slack-message.git"
+    "url": "git+https://github.com/KeisukeYamashita/slack-message-publisher.git"
   },
   "author": "KeisukeYamashita",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KeisukeYamashita/slack-message/issues"
+    "url": "https://github.com/KeisukeYamashita/slack-message-publisher/issues"
   },
-  "homepage": "https://github.com/KeisukeYamashita/slack-message#readme"
+  "homepage": "https://github.com/KeisukeYamashita/slack-message-publisher#readme"
 }
