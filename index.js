@@ -9,7 +9,7 @@ function createData (type, from, message) {
 }
 
 
-async function send(projectId, topicName, data){
+async function publish(projectId, topicName, data){
     const pubsub = new PubSub({projectId});
     const dataStr = JSON.stringify(data)
     const dataBuffer = Buffer.from(dataStr);
