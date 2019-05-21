@@ -18,5 +18,5 @@ async function publish(projectId, topicName, data){
     return messageId
 }
 
-exports.send =  send
+exports.publish =  publish
 exports.createData = createData
