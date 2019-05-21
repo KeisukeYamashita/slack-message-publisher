@@ -1,15 +1,15 @@
 class Publisher {
-    constructor(projectId, topic){
+    constructor(projectId, topicName){
         this.projectId = projectId
-        this.topic = topic
+        this.topicName = topicName
     }
 
-    async publish(projectId, topicName, data){
-        const pubsub = new PubSub({projectId});
+    async publish(data){
+        const pubsub = new PubSub(this.projectId);
         const dataStr = JSON.stringify(data)
         const dataBuffer = Buffer.from(dataStr);
     
-        const messageId = await pubsub.topic(topicName).publish(dataBuffer);
+        const messageId = await pubsub.topic(this.topicName).publish(dataBuffer);
         return messageId
     }
 }
