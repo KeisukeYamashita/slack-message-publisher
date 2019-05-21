@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/KeisukeYamashita/slack-message-publisher/issues"
   },
-  "homepage": "https://github.com/KeisukeYamashita/slack-message-publisher#readme"
+  "homepage": "https://github.com/KeisukeYamashita/slack-message-publisher#readme",
+  "dependencies": {
+    "@google-cloud/pubsub": "^0.29.1"
+  }
 }

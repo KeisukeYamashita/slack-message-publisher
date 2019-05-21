@@ -1,3 +1,7 @@
+'use strict';
+
+const {PubSub} = require('@google-cloud/pubsub');
+
 class Publisher {
     constructor(projectId, topicName){
         this.projectId = projectId
