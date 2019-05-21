@@ -1,3 +1,19 @@
+class Publisher {
+    constructor(projectId, topic){
+        this.projectId = projectId
+        this.topic = topic
+    }
+
+    async publish(projectId, topicName, data){
+        const pubsub = new PubSub({projectId});
+        const dataStr = JSON.stringify(data)
+        const dataBuffer = Buffer.from(dataStr);
+    
+        const messageId = await pubsub.topic(topicName).publish(dataBuffer);
+        return messageId
+    }
+}
+
 function createData (type, from, message) {
     return {
         type: type,
@@ -8,15 +24,5 @@ function createData (type, from, message) {
     }
 }
 
-
-async function publish(projectId, topicName, data){
-    const pubsub = new PubSub({projectId});
-    const dataStr = JSON.stringify(data)
-    const dataBuffer = Buffer.from(dataStr);
-
-    const messageId = await pubsub.topic(topicName).publish(dataBuffer);
-    return messageId
-}
-
-exports.publish =  publish
+exports.Publisher =  Publisher
 exports.createData = createData
