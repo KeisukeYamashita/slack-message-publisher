@@ -18,15 +18,19 @@ class Publisher {
     }
 }
 
-function createData (type, from, message) {
-    return {
+function createData (type, from, message, option) {
+    const data = {
         type: type,
         payload: {
             from: from,
             message: message
         }
-    }
+    };
+
+    if (option !== undefined) data.payload.option = option;
+
+    return data;
 }
 
-exports.Publisher =  Publisher
-exports.createData = createData
+exports.Publisher =  Publisher;
+exports.createData = createData;
